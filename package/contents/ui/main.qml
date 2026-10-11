@@ -73,12 +73,31 @@ PlasmoidItem {
             anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
 
-            Rectangle {
+            Item {
                 Layout.alignment: Qt.AlignVCenter
-                width: Kirigami.Units.smallSpacing * 2
-                height: width
-                radius: width / 2
-                color: root.dotColor
+                implicitWidth: Kirigami.Units.iconSizes.small
+                implicitHeight: implicitWidth
+
+                Kirigami.Icon {
+                    anchors.fill: parent
+                    source: Qt.resolvedUrl("openai.svg")
+                    isMask: true
+                    color: Kirigami.Theme.textColor
+                    opacity: 0.85
+                }
+
+                // Status badge over the logo's corner; the ring keeps it legible on the logo.
+                Rectangle {
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    anchors.margins: -2
+                    width: Math.round(parent.width * 0.55)
+                    height: width
+                    radius: width / 2
+                    color: root.dotColor
+                    border.width: 2
+                    border.color: Kirigami.Theme.backgroundColor
+                }
             }
 
             PlasmaComponents.Label {
