@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "cidwel"
+            }
+        ],
+        "Category": "Online Services",
+        "Description": "When the next Codex usage reset is, or when the last one was",
+        "Icon": "view-refresh",
+        "Id": "com.cidwel.codexreset",
+        "License": "MIT",
+        "Name": "Codex Reset",
+        "Version": "1.0.0",
+        "Website": "https://codex-reset.com/"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
